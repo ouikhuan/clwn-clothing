@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Switch,Route,Redirect} from 'react-router-dom';
 
-import logo from './logo.svg';
 import './App.css';
 import Homepage from './pages/homepage/hompage.component';
 import ShopPage from './pages/shoppage/shoppage.component';
