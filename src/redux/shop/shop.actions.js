@@ -6,7 +6,7 @@ export const fectchCollectionSucssess = (collectionMap)=>({
     payload:collectionMap
 })
 
-export const fetchCollectionStart = ()=>({
+export const fetchCollectionsStart = ()=>({
     type:shopActionTypes.FETCH_COLLECTION_START
 })
 
@@ -18,7 +18,7 @@ export const fetchCollectionFailure = ({errorMessage})=>({
 export const fetchCollectionStartAsync = ()=> {
     return dispatch => {
         const collectionRef = fireStore.collection('collections');
-        dispatch(fetchCollectionStart());
+        dispatch(fetchCollectionsStart());
         collectionRef.get().then(snapShot => {
             dispatch(fectchCollectionSucssess(convertCollectionsSnapshotToMap(snapShot)));
         }).catch(errorMessage =>  dispatch(fetchCollectionFailure(errorMessage)));

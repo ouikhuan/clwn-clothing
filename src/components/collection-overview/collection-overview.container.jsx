@@ -1,4 +1,3 @@
-import React from 'react';
 import {connect} from 'react-redux';
 import { createStructuredSelector } from "reselect";
 import WithSpinner from "../../components/with-spinner/with-spinner.component";
