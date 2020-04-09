@@ -27,4 +27,4 @@ const mapDispatchToProps = dispatch => ({
     addItem: item=> dispatch(addItem(item))
 });
 
-export default connect(null,mapDispatchToProps)(CollectionItem);
+export default React.memo(connect(null,mapDispatchToProps)(CollectionItem));
